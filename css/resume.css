@@ -115,3 +115,47 @@ a {
   a:hover, a:focus, a:active {
     color: #824027; }
 
+.btn-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom-grey {
+  background-color: #BD5D38; /* Adjust this hex code for your preferred shade of grey */
+  border-color: #BD5D38;
+  color: white; /* For the icon or text color */
+}
+
+.btn-custom-grey:hover {
+  background-color: #BD5D38;/* A slightly darker grey for hover state */
+  border-color: #BD5D38;
+}
+
+.hover-text:hover::after {
+  content: attr(data-hover-text);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-80%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hover-text:hover::after {
+  opacity: 1;
+}
